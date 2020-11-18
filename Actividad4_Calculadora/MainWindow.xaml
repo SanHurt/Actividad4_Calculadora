@@ -1,0 +1,155 @@
+﻿<Window x:Class="Actividad4_Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Actividad4_Calculadora"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="550"
+        Width="450"
+        MinHeight="450"
+        MinWidth="300">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <EventSetter Event="Click" Handler="Button_Click"></EventSetter>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button1" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Tag" Value="1"/>
+            <Setter Property="Grid.Row" Value="2"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button2">
+            <Setter Property="Tag" Value="2"/>
+            <Setter Property="Grid.Row" Value="2"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button3">
+            <Setter Property="Tag" Value="3"/>
+            <Setter Property="Grid.Row" Value="2"/>
+            <Setter Property="Grid.Column" Value="2"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button4">
+            <Setter Property="Tag" Value="4"/>
+            <Setter Property="Grid.Row" Value="3"/>
+            <Setter Property="Grid.Column" Value="0"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button5">
+            <Setter Property="Tag" Value="5"/>
+            <Setter Property="Grid.Row" Value="3"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button6">
+            <Setter Property="Tag" Value="6"/>
+            <Setter Property="Grid.Row" Value="3"/>
+            <Setter Property="Grid.Column" Value="2"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button7">
+            <Setter Property="Tag" Value="7"/>
+            <Setter Property="Grid.Row" Value="4"/>
+            <Setter Property="Grid.Column" Value="0"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button8">
+            <Setter Property="Tag" Value="8"/>
+            <Setter Property="Grid.Row" Value="4"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button9">
+            <Setter Property="Tag" Value="9"/>
+            <Setter Property="Grid.Row" Value="4"/>
+            <Setter Property="Grid.Column" Value="2"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="button0">
+            <Setter Property="Tag" Value="0"/>
+            <Setter Property="Grid.Row" Value="5"/>
+            <Setter Property="Grid.ColumnSpan" Value="3"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid
+              Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black"
+                    BorderThickness="3"
+                    Grid.ColumnSpan="3"
+                    Grid.RowSpan="2">
+            <Viewbox>
+                <TextBlock FontSize="50" x:Name="numerostextBlock"></TextBlock>
+            </Viewbox>
+        </Border>
+            <Button
+                Style="{StaticResource button1}">
+            <Viewbox>
+                <TextBlock>1</TextBlock>
+            </Viewbox>
+        </Button>
+
+        <Button Style="{StaticResource button2}">
+            <Viewbox>
+                <TextBlock>2</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource button3}">
+            <Viewbox>
+                <TextBlock>3</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource button4}">
+            <Viewbox>
+                <TextBlock>4</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource button5}">
+            <Viewbox>
+                <TextBlock>5</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource button6}">
+            <Viewbox>
+                <TextBlock>6</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource button7}">
+            <Viewbox>
+                <TextBlock>7</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource button8}">
+            <Viewbox>
+                <TextBlock>8</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource button9}">
+            <Viewbox>
+                <TextBlock>9</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource button0}">
+            <Viewbox>
+                <TextBlock>0</TextBlock>
+            </Viewbox>
+        </Button>
+        </Grid>
+
+    
+</Window>
